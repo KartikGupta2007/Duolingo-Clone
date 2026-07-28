@@ -1,0 +1,10 @@
+# Pinned to the versions this project was built and tested against (CLAUDE.md §3).
+fastapi==0.140.7
+uvicorn[standard]==0.51.0
+SQLAlchemy==2.0.51
+pydantic==2.13.4
+python-dotenv==1.2.2
+
+# Optional: only needed for POST /api/exercise/explain (the AI hint route).
+# The rest of the app runs fine without this installed or without an API key.
+anthropic==0.120.0

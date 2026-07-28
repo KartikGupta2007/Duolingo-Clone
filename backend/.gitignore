@@ -1,0 +1,14 @@
+# Secrets — never commit. `.env` holds the Anthropic API key.
+.env
+
+# Virtualenv
+venv/
+.venv/
+
+# SQLite database (regenerate with `python seed.py`)
+*.db
+*.sqlite3
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
