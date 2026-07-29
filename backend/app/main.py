@@ -55,6 +55,8 @@ app.include_router(leaderboard.router)
 app.include_router(explain.router)  # optional AI route
 
 
-@app.get("/", tags=["health"])
+# HEAD is included because uptime monitors (e.g. UptimeRobot) probe with HEAD,
+# and FastAPI's @app.get registers only GET, so they'd get a 405 and report "down".
+@app.api_route("/", methods=["GET", "HEAD"], tags=["health"])
 def health():
     return {"status": "ok", "docs": "/docs"}
